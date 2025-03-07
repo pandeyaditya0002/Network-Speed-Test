@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Speed Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Network Speed Test</h1>
+        <p>Click "Start Test" to measure your network speed.</p>
+        
+        <button id="startTest">Start Test</button>
+
+        <div id="results">
+            <p><strong>Download Speed:</strong> <span id="downloadSpeed">--</span> Mbps</p>
+            <p><strong>Upload Speed:</strong> <span id="uploadSpeed">--</span> Mbps</p>
+            <p><strong>Ping:</strong> <span id="ping">--</span> ms</p>
+        </div>
+    </div>
+
+   
+</body>
+</html>
