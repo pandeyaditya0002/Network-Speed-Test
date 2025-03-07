@@ -19,7 +19,20 @@
             <p><strong>Ping:</strong> <span id="ping">--</span> ms</p>
         </div>
     </div>
+    <script>
+        document.getElementById("startTest").addEventListener("click", async function() {
+            document.getElementById("startTest").innerText = "Testing...";
+            
+            const response = await fetch("/speedtest");
+            const data = await response.json();
 
+            document.getElementById("downloadSpeed").innerText = data.download;
+            document.getElementById("uploadSpeed").innerText = data.upload;
+            document.getElementById("ping").innerText = data.ping;
+
+            document.getElementById("startTest").innerText = "Start Test";
+        });
+    </script>
    
 </body>
 </html>
